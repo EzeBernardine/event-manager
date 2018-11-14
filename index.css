@@ -6,6 +6,7 @@ body {
   padding: 0;
   margin: 0;
   background-color: #dbdfe243;
+  height: 100vh;
 }
 img {
   width: 100%
@@ -29,16 +30,16 @@ span {
   font-size: 12px;
   color: #dbdfe2
 }
-header, .navbar a , .data, section.searchbar a{
+header h1, .navbar a , .data, section.searchbar a{
   color: #dbdfe2;
 }
 header {
   position: fixed;
-  margin: -10px 5%
+  margin: -10px 5%;
 }
 
 /* flex items */
-.navbar,.mainsearch, section.searchbar p {
+.navbar,.mainsearch, section.searchbar p,.carocel {
   display: flex;
 }
 /* \navbar */
@@ -54,40 +55,66 @@ header {
 .navbar li {
   flex: 1
 }
-/* carocel */
-.carocel {
+/* background */
+.background { 
   margin-top: -51px;
+  z-index: 0;
+}
+.carocels img {
+  width: 20%;
+  height: auto;
+}
+.carocel{
+  justify-content: flex-start;
+}
+.carocels {
+  margin: -30% auto;
+  z-index: 1;
+  width: 80%;
+  border: 1px solid red;
+  flex-direction: column;
 }
 .carocel1 {
-  margin-top: -51%;
-  z-index: 1;
-  height: 50rem;
-  background: url('img/black.jpg') no-repeat center;
-  background-size: 80%;
-  animation:  images 5s ease forwards;
+  width: 100%;
 }
 .carocel2 {
-  margin-top: -51%;
-  z-index: 1;
-  height: 50rem;
-  background: url('img/black.jpg') no-repeat center;
-  background-size: 80%;
+  margin-top: -12%
 }
+.carocel3 {
+  margin-top: -12%;
+}
+.carocel1 img{
+  animation:  images 12s ease forwards;
+}
+
 @keyframes images{
   0% {
-    /* margin: -30% 50% */
+    transform:  scale( .5);
+  }
+  20% {
+    margin-left:  20%;
+    transform:  scale(2);
+  }
+  40% {
+    margin-left:  40%;
+    transform:  scale(4);
+  }
+  80% {
+    margin-left:  80%;
+    transform:  scale(1);
   }
   100% {
-    background-size: 80%;
-    transform: scale(.5);
-    /* margin: -50% 10px */
+    margin-left:  80%;
+    transform:  scale(1);
   }
   
 }
 
 /* data */
 .data {
-  background-color: #4e819872;
+  margin-top: 000px;
+  background-color: #4e8198;
+  z-index: 1;
 }
 .data {
   max-width: 180px;
