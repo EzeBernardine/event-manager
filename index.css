@@ -36,6 +36,7 @@ header h1, .navbar a , .data, section.searchbar a{
 header {
   position: fixed;
   margin: -10px 5%;
+  z-index: 1;
 }
 
 /* flex items */
@@ -58,37 +59,29 @@ header {
 /* background */
 .background { 
   margin-top: -51px;
-  /* z-index: 0; */
-  /* position: relative; */
-  /* background: url('img/BEUGBRe.jpg') no-repeat top;
-  background-size: 100%; */
-  border: 1px solid red;
-  /* background-blend-mode: overlay; */
-  /* background-color: #c44536; */
+  z-index: 0;
   width: 100%;
-  /* height: 100vh; */
+  position: absolute;
 }
 .backgroundcover {
-  /* height: auto; */
-  /* width: 100% ; */
-  background-color: #6e060680;
-  /* margin: 60% auto; */
-  /* z-index: 5; */
-  /* position: absolute; */
-  /* top: 0 */
+  height: 123%;
+  width: 100% ;
+  background-color: #00091063;
+  margin: -60% auto;
+  position: absolute;
 }
 .carocels img {
   width: 20%;
   height: auto;
+  opacity: 0;
 }
 .carocel{
   justify-content: flex-start;
 }
 .carocels {
-  /* margin: -40% auto; */
+  margin: 17% auto;
   z-index: 1;
   width: 80%;
-  border: 1px solid rgb(247, 245, 245);
   flex-direction: column;
 }
 .carocel1 {
@@ -100,45 +93,65 @@ header {
 .carocel3 {
   margin-top: -12%;
 }
-.carocel1 img{
-  animation:  images 12s ease forwards;
+.carocel3 img{
+  animation:  images 20s  ease forwards infinite;
 }
-.p {
-  margin-top: 70%
+.carocel2 img{
+  animation:  images 20s 7s ease forwards infinite;
+}
+.carocel1 img{
+  animation:  images 20s 12s ease forwards infinite;
 }
 
 @keyframes images{
   0% {
-    transform:  scale( .5);
+    transform: scale(.5) rotateY(90deg);
+    opacity: .2;
   }
-  20% {
+  10% {
     margin-left:  20%;
+    opacity: 1;
     transform:  scale(2);
   }
   40% {
     margin-left:  40%;
-    transform:  scale(4);
+    transform: scale(4);
+    opacity: 1;
   }
   80% {
     margin-left:  80%;
-    transform:  scale(1);
+    transform: scale(1) rotateY(-90deg);
+    opacity: 1;
+    z-index: 0;
+  }
+  90% {
+    opacity: .05;
+    z-index: 0;
   }
   100% {
     margin-left:  0%;
-    transform:  scale(1);
+    transform: scale(1) rotateY(0deg);
+    opacity: .0;
   }
   
 }
 
 /* data */
-.data {
-  background-color: #4e8198;
-  z-index: 1;
+.comment {
+  display: flex;
+  margin-top: -3%;
+  justify-content: space-between
 }
 .data {
-  max-width: 180px;
-  margin-top: -35%;
-  text-align: center
+  background-color: #4e819886;
+  z-index: 1;
+  padding: 2px;
+  text-align: center;
+}
+.quote {
+  z-index: 1;
+  color: #c44536;
+  font-size: 20px
 }
 .data h2 {
   font-size: 17px;
@@ -146,7 +159,7 @@ header {
 }
 /* searchbar */
 section.searchbar {
-  margin: 0% auto;
+  margin: 1% auto;
   width: 60%;
   padding: 15px 10px;
   background-color: #084c6190;
@@ -171,4 +184,27 @@ section.searchbar p {
   padding: 0;
   align-items: center;
   background-color: #c44536;
+}
+
+@media all and  (max-width: 1400px){
+  .comment {
+   background-color: #dbdfe2;
+  /* margin-top: -10%; */
+  justify-content: space-between;
+  z-index: 1;
+}
+.data {
+  background-color: transparent;
+}
+}
+@media all and  (max-width: 770px){
+  .comment {
+   background-color: #dbdfe2;
+  margin-top: -5%;
+  justify-content: space-between;
+  z-index: 1;
+}
+.data h2 {
+  font-size: -5px;
+}
 }
