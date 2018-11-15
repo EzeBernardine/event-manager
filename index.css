@@ -58,7 +58,24 @@ header {
 /* background */
 .background { 
   margin-top: -51px;
-  z-index: 0;
+  /* z-index: 0; */
+  /* position: relative; */
+  /* background: url('img/BEUGBRe.jpg') no-repeat top;
+  background-size: 100%; */
+  border: 1px solid red;
+  /* background-blend-mode: overlay; */
+  /* background-color: #c44536; */
+  width: 100%;
+  /* height: 100vh; */
+}
+.backgroundcover {
+  /* height: auto; */
+  /* width: 100% ; */
+  background-color: #6e060680;
+  /* margin: 60% auto; */
+  /* z-index: 5; */
+  /* position: absolute; */
+  /* top: 0 */
 }
 .carocels img {
   width: 20%;
@@ -68,10 +85,10 @@ header {
   justify-content: flex-start;
 }
 .carocels {
-  margin: -30% auto;
+  /* margin: -40% auto; */
   z-index: 1;
   width: 80%;
-  border: 1px solid red;
+  border: 1px solid rgb(247, 245, 245);
   flex-direction: column;
 }
 .carocel1 {
@@ -85,6 +102,9 @@ header {
 }
 .carocel1 img{
   animation:  images 12s ease forwards;
+}
+.p {
+  margin-top: 70%
 }
 
 @keyframes images{
@@ -104,7 +124,7 @@ header {
     transform:  scale(1);
   }
   100% {
-    margin-left:  80%;
+    margin-left:  0%;
     transform:  scale(1);
   }
   
@@ -112,7 +132,6 @@ header {
 
 /* data */
 .data {
-  margin-top: 000px;
   background-color: #4e8198;
   z-index: 1;
 }
@@ -132,6 +151,7 @@ section.searchbar {
   padding: 15px 10px;
   background-color: #084c6190;
   border-radius: 5px;
+  z-index: 1;
 }
 .mainsearch {
   width: 90%;
