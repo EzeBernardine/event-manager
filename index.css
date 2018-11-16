@@ -28,10 +28,12 @@ input {
 }
 span {
   font-size: 12px;
-  color: #dbdfe2
 }
-header h1, .navbar a , .locationAndTime, section.searchbar a{
+header h1, .navbar a , .locationAndTime, section.searchbar a, .locationAndTime span, .comment {
   color: #dbdfe2;
+}
+.backgroundcover, section.searchbar {
+  background-color: #084c6190;
 }
  .navbar a:hover {
   color: #dbdfe2be;
@@ -77,6 +79,11 @@ header {
   width: 20%;
   height: auto;
   opacity: 0;
+}
+.carocels img:hover {
+  transform: scale(4) !important ;
+  margin: 0 auto !important;
+  z-index: 1 !important;
 }
 .carocel{
   justify-content: flex-start;
@@ -148,20 +155,19 @@ header {
   padding: 0 3%;
 }
 .locationAndTime {
-  background-color: #4e819886;
   padding: 0;
   text-align: center;
 }
 .date {
   padding: 0 10px;
 }
-.locationAndTime span, .comment   {
-  color: #dbdfe2;
-}
 .comment {
   padding: 0;
   font-size: 20px;
   font-weight: bolder;
+}
+.comment p:hover {
+  color: #dbdfe2 !important
 }
 .locationAndTime h2 {
   font-size: 17px;
@@ -172,7 +178,6 @@ section.searchbar {
   margin: 1% auto;
   width: 60%;
   padding: 15px 10px;
-  background-color: #084c6190;
   border-radius: 5px;
   z-index: 1;
 }
@@ -205,9 +210,9 @@ section.searchbar p {
   100%{color: #dbdfe2;}
 }
 @keyframes comment1 {
-  0%{ color: red;}
+  0%{ color: #c44536}
   50%{color: transparent;}
-  100%{color: red;}
+  100%{color: #c44536;}
 }
 
 
@@ -221,14 +226,15 @@ section.searchbar p {
   background-color: white;
   justify-content: space-between;
   text-align: center;
-  align-items: center
-}
+  align-items: center;
+  margin-top: -2%
+} 
 .locationAndTime {
   display: flex;
   order: 2;
 }
-.locationAndTime span{
-  color: #c44536
+.locationAndTime span,.comment p:hover{
+  color: #c44536 !important
 }
 .locationAndTime {
   background-color: transparent;
@@ -238,10 +244,15 @@ section.searchbar p {
 
 @media all and  (max-width: 770px){
   .details {
-   margin-top: -5%;
    flex-direction: column;
    align-items: center;
   z-index: 1;
-}
-
+  }
+  .background {margin-top: 0px;}
+  .comment {font-size: 80%;flex: 1}
+  .locationAndTime h2 {font-size: 80%;}
+  .locationAndTime span {font-size: 70%;}
+  section.searchbar {width: 90%; padding: 5px 0 }
+  .mainsearch {width: 95%; }
+  section.searchbar p {padding: 0 5px }
 }
