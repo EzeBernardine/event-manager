@@ -33,6 +33,9 @@ span {
 header h1, .navbar a , .data, section.searchbar a{
   color: #dbdfe2;
 }
+ .navbar a:hover {
+  color: #dbdfe2be;
+}
 header {
   position: fixed;
   margin: -10px 5%;
