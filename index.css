@@ -1,22 +1,13 @@
 
-/* #c44536;
-#084c61;
-#4e8098; */
 body {
   padding: 0;
   margin: 0;
   background-color: #dbdfe243;
   height: 100vh;
 }
-img {
-  width: 100%
-}
-li {
-  list-style-type: none;
-}
-a {
-  text-decoration: none
-}
+img {width: 100%}
+li {list-style-type: none;}
+a {text-decoration: none}
 input {
   padding: 10px;
   margin: 0;
@@ -26,9 +17,7 @@ input {
   display: flex;
   flex-direction: column;
 }
-span {
-  font-size: 12px;
-}
+span {font-size: 12px;}
 header h1, .navbar a , .locationAndTime, section.searchbar a, .locationAndTime span, .comment {
   color: #dbdfe2;
 }
@@ -39,13 +28,13 @@ header h1, .navbar a , .locationAndTime, section.searchbar a, .locationAndTime s
   color: #dbdfe2be;
 }
 header {
-  position: fixed;
+  position: absolute;
   margin: -10px 5%;
   z-index: 1;
 }
 
 /* flex items */
-.navbar,.mainsearch, section.searchbar p,.carocel {
+.navbar,.mainsearch, section.searchbar p,.carocel, .details,.navbar ul {
   display: flex;
 }
 /* \navbar */
@@ -55,7 +44,6 @@ header {
 }
 .navbar ul{
   max-width: 400px;
-  display: flex;
   flex: 1;
 }
 .navbar li {
@@ -75,6 +63,10 @@ header {
   margin: -60% auto;
   position: absolute;
 }
+
+
+
+/* CAROCEL */
 .carocels img {
   width: 20%;
   height: auto;
@@ -112,7 +104,6 @@ header {
 .carocel1 img{
   animation:  images 20s 12s ease forwards infinite;
 }
-
 @keyframes images{
   0% {
     transform: scale(.5) rotateY(90deg);
@@ -148,7 +139,6 @@ header {
 
 /* locationAndTime */
 .details {
-  display: flex;
   margin-top: -2.5%;
   z-index: 1;
   justify-content: space-between;
@@ -158,17 +148,13 @@ header {
   padding: 0;
   text-align: center;
 }
-.date {
-  padding: 0 10px;
-}
+.date { padding: 0 10px;}
 .comment {
   padding: 0;
   font-size: 20px;
   font-weight: bolder;
 }
-.comment p:hover {
-  color: #dbdfe2 !important
-}
+.comment p:hover {color: #dbdfe2 !important}
 .locationAndTime h2 {
   font-size: 17px;
   color: #4e8198;
@@ -189,10 +175,10 @@ section.searchbar {
   background-color: #dbdfe2;
 }
 section.searchbar input {
-  flex: 7 1 90%
+  flex: 7 1 
 }
 section.searchbar p {
-  flex: 1 1 10% ;
+  flex: 1 .5  ;
   text-align: center;
   justify-content: center;
   margin: 0;
@@ -200,9 +186,7 @@ section.searchbar p {
   align-items: center;
   background-color: #c44536;
 }
-.comment p {
-  animation: comment .7s linear infinite
-}
+.comment p { animation: comment .7s linear infinite}
 
 @keyframes comment {
   0%{ color: #dbdfe2;}
@@ -219,12 +203,9 @@ section.searchbar p {
 
 
 @media all and  (max-width: 1400px){
-  .comment p {
-  animation: comment1 .7s linear infinite
-}
+  .comment p {animation: comment1 .7s linear infinite}
   .details {
   background-color: white;
-  justify-content: space-between;
   text-align: center;
   align-items: center;
   margin-top: -2%
@@ -233,26 +214,19 @@ section.searchbar p {
   display: flex;
   order: 2;
 }
-.locationAndTime span,.comment p:hover{
-  color: #c44536 !important
-}
-.locationAndTime {
-  background-color: transparent;
-}
+.locationAndTime span,.comment p:hover{color: #c44536 !important}
+.locationAndTime {background-color: transparent;}
 
 } 
 
 @media all and  (max-width: 770px){
-  .details {
-   flex-direction: column;
-   align-items: center;
-  z-index: 1;
-  }
+  .details {flex-direction: column;  }
   .background {margin-top: 0px;}
   .comment {font-size: 80%;flex: 1}
   .locationAndTime h2 {font-size: 80%;}
   .locationAndTime span {font-size: 70%;}
   section.searchbar {width: 90%; padding: 5px 0 }
   .mainsearch {width: 95%; }
-  section.searchbar p {padding: 0 5px }
+
+  .navbar li {position: absolute;}
 }
