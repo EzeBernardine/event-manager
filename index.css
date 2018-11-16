@@ -34,7 +34,7 @@ header {
 }
 
 /* flex items */
-.navbar,.mainsearch, section.searchbar p,.carocel, .details,.navbar ul {
+.navbar,.mainsearch, section.searchbar p,.carocel, .details,.navbar ul, .event, .diffEvents {
   display: flex;
 }
 /* \navbar */
@@ -175,7 +175,7 @@ section.searchbar p {
 }
 .comment p { animation: comment .7s linear infinite}
 
-@keyframes comment {
+/* @keyframes comment {
   0%{ color: #dbdfe2;}
   50%{color: transparent;}
   100%{color: #dbdfe2;}
@@ -184,9 +184,36 @@ section.searchbar p {
   0%{ color: #c44536}
   50%{color: transparent;}
   100%{color: #c44536;}
+} */
+
+
+
+
+
+
+
+
+
+
+.event {
+  width: 90%;
+  margin: 0 auto;
+  border: 1px solid red
 }
-
-
+.events {
+  flex: 2;
+  border: 1px solid red
+}
+.current {
+  border: 1px solid red;
+  flex: 1
+}
+.topic {
+  flex: 3
+}
+.eventDetails {
+  flex: 1
+}
 
 
 @media all and  (max-width: 1400px){
@@ -203,7 +230,7 @@ section.searchbar p {
 }
 .locationAndTime span,.comment p:hover{color: #c44536 !important}
 .locationAndTime {background-color: transparent;}
-
+.comment p {color: #c44536 !important}
 } 
 
 @media all and  (max-width: 770px){
