@@ -30,7 +30,7 @@ span {
   font-size: 12px;
   color: #dbdfe2
 }
-header h1, .navbar a , .data, section.searchbar a{
+header h1, .navbar a , .locationAndTime, section.searchbar a{
   color: #dbdfe2;
 }
  .navbar a:hover {
@@ -139,26 +139,33 @@ header {
   
 }
 
-/* data */
-.comment {
+/* locationAndTime */
+.details {
   display: flex;
-  margin-top: -3%;
-  justify-content: space-between
-}
-.data {
-  background-color: #4e819886;
+  margin-top: -2.5%;
   z-index: 1;
-  padding: 2px;
+  justify-content: space-between;
+  padding: 0 3%;
+}
+.locationAndTime {
+  background-color: #4e819886;
+  padding: 0;
   text-align: center;
 }
-.quote {
-  z-index: 1;
-  color: #c44536;
-  font-size: 20px
+.date {
+  padding: 0 10px;
 }
-.data h2 {
+.locationAndTime span, .comment   {
+  color: #dbdfe2;
+}
+.comment {
+  padding: 0;
+  font-size: 20px;
+  font-weight: bolder;
+}
+.locationAndTime h2 {
   font-size: 17px;
-  color: #90c2e7;
+  color: #4e8198;
 }
 /* searchbar */
 section.searchbar {
@@ -188,26 +195,53 @@ section.searchbar p {
   align-items: center;
   background-color: #c44536;
 }
+.comment p {
+  animation: comment .7s linear infinite
+}
+
+@keyframes comment {
+  0%{ color: #dbdfe2;}
+  50%{color: transparent;}
+  100%{color: #dbdfe2;}
+}
+@keyframes comment1 {
+  0%{ color: red;}
+  50%{color: transparent;}
+  100%{color: red;}
+}
+
+
+
 
 @media all and  (max-width: 1400px){
-  .comment {
-   background-color: #dbdfe2;
-  /* margin-top: -10%; */
-  justify-content: space-between;
-  z-index: 1;
+  .comment p {
+  animation: comment1 .7s linear infinite
 }
-.data {
+  .details {
+  background-color: white;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center
+}
+.locationAndTime {
+  display: flex;
+  order: 2;
+}
+.locationAndTime span{
+  color: #c44536
+}
+.locationAndTime {
   background-color: transparent;
 }
-}
+
+} 
+
 @media all and  (max-width: 770px){
-  .comment {
-   background-color: #dbdfe2;
-  margin-top: -5%;
-  justify-content: space-between;
+  .details {
+   margin-top: -5%;
+   flex-direction: column;
+   align-items: center;
   z-index: 1;
 }
-.data h2 {
-  font-size: -5px;
-}
+
 }
