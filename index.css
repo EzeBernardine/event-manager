@@ -183,7 +183,7 @@ section.searchbar p {
 /* event section */
 .event {
   width: 90%;
-  margin: 0 auto;
+  margin: 5% auto;
   background-color: #dbdfe21e;
 }
 .eachEvent{ flex: 3;}
@@ -204,7 +204,7 @@ section.searchbar p {
 }
 .eventDetails h3{
   align-items: center;
-   padding: 2% 0;
+  padding: 2% 0;
 }
 .eventDetails span{font-size: 70%}
 .diffEvents {
@@ -212,6 +212,9 @@ section.searchbar p {
   font-size: 60%;
   margin:  3%;
   padding: .5% 1%
+}
+.diffEvents:hover {
+  background-color: #dbdfe23f;
 }
 .likes a{
   font-size: 90%;
