@@ -126,18 +126,15 @@ header {
 
 /* locationAndTime */
 .details {
-  margin-top: -2.5%;
+  margin-top: -3%;
   z-index: 1;
   justify-content: space-between;
   padding: 0 3%;
 }
 .locationAndTime {text-align: center;}
 .date { padding: 0 10px;}
-.comment {
-  padding: 0;
-  font-size: 20px;
-  font-weight: bolder;
-}
+.comment {font-weight: bolder;}
+.comment p{font-size: 97%; }
 .comment p:hover {color: #dbdfe2 !important}
 .locationAndTime h2 {
   font-size: 17px;
@@ -145,7 +142,7 @@ header {
 }
 /* searchbar */
 section.searchbar {
-  margin: 1% auto;
+  margin: -.5% auto;
   width: 60%;
   padding: 15px 10px;
   border-radius: 5px;
@@ -181,22 +178,29 @@ section.searchbar p {
 }
 
 /* event section */
+.title {
+  text-align: center;
+  font-size: 90%;
+  width: 60%;
+  margin: 10% 0 3%
+}
 .event {
   width: 90%;
-  margin: 5% auto;
+  margin: auto;
+  padding: 2% ;
   background-color: #dbdfe21e;
 }
 .eachEvent{ flex: 3;}
 .eachEvent h1{ 
   text-align: center;
 }
-.eachEvent h1, .topic h2,.eventTime,.eventDate{margin: 0;}
+.eachEvent h1, .topic h2, .topic h4,.eventTime,.eventDate{margin: 0;}
 .topic h2 {padding: 3% 0}
 .currentEvent {flex: 2;}
 
 .topic {flex: 3;}
 .eventDetails {
-  flex: 1;
+  flex:  1 ;
   font-size: 80%;
   flex-direction: column;
   margin: auto;
@@ -208,9 +212,9 @@ section.searchbar p {
 }
 .eventDetails span{font-size: 70%}
 .diffEvents {
-  border: 1px solid #dbdfe2;
+  border: 1px solid #dbdfe270;
   font-size: 60%;
-  margin:  3%;
+  margin:   0% 3% 3% 0;
   padding: .5% 1%
 }
 .diffEvents:hover {
@@ -218,25 +222,29 @@ section.searchbar p {
 }
 .likes a{
   font-size: 90%;
-  margin-right: 3%;
+  padding:  1.5%;
+  border-radius: 3px;
+  color: #084c61d8
+}
+.likes a:hover{
+  background-color: #dbdfe2a6;
 }
 
 
-@media all and  (max-width: 1400px){
-  /* .comment p {animation: comment1 .7s linear 10 !important} */
+@media all and  (max-width: 1300px){
   .details {
-  background-color: white;
-  text-align: center;
-  align-items: center;
-  margin-top: -2%
-} 
-.locationAndTime {
-  display: flex;
-  order: 2;
-}
-.locationAndTime span,.comment p:hover{color: #c44536 !important}
-.locationAndTime {background-color: transparent;}
-.comment p {color: #c44536 !important}
+    background-color: white;
+    text-align: center;
+    align-items: center;
+    margin-top: -2%;
+  } 
+  .locationAndTime {
+    display: flex;
+    order: 2;
+  }
+  .locationAndTime span,.comment p:hover{color: #c44536 !important}
+  .comment p {color: #c44536 }
+  .comment p {animation: comment1 .7s linear 10 !important}
 } 
 
 @media all and  (max-width: 770px){
@@ -246,7 +254,19 @@ section.searchbar p {
   .locationAndTime h2 {font-size: 80%;}
   .locationAndTime span {font-size: 70%;}
   section.searchbar {width: 90%; padding: 5px 0 }
+  section.searchbar input{width: 90%; padding: 5px 0 }
   .mainsearch {width: 95%; }
+  .diffEvents {flex-direction: column}
+  .eventDetails {
+    flex-direction: row;
+    width: 100%
+  }
+ .likes { font-size: 60% ; 
+    border-top: 1px solid #dbdfe2a6;
+    border-bottom: 1px solid #dbdfe2a6
+ }
+  .topic,  .likes {font-size: 80%}
+  .eventDetails h3{flex: 1 ; }
 
   .navbar li {position: absolute;}
 }
