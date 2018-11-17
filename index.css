@@ -34,7 +34,7 @@ header {
 }
 
 /* flex items */
-.navbar,.mainsearch, section.searchbar p,.carocel, .details,.navbar ul, .event, .diffEvents {
+.navbar,.mainsearch, section.searchbar p,.carocel, .details,.navbar ul, .event, .diffEvents, .likes, .eventDetails{
   display: flex;
 }
 /* \navbar */
@@ -88,15 +88,9 @@ header {
 .carocel1 {width: 100%;}
 .carocel2 {margin-top: -12%}
 .carocel3 {margin-top: -12%;}
-/* .carocel3 img{
-  animation:  images 20s  ease forwards infinite;
-}
-.carocel2 img{
-  animation:  images 20s 7s ease forwards infinite;
-}
-.carocel1 img{
-  animation:  images 20s 12s ease forwards infinite;
-} */
+.carocel3 img{animation:  images 20s  ease forwards 5;}
+.carocel2 img{animation:  images 20s 7s ease forwards 5;}
+.carocel1 img{animation:  images 20s 12s ease forwards 5;}
 @keyframes images{
   0% {
     transform: scale(.5) rotateY(90deg);
@@ -173,9 +167,9 @@ section.searchbar p {
   align-items: center;
   background-color: #c44536;
 }
-.comment p { animation: comment .7s linear infinite}
+.comment p { animation: comment .7s linear 10}
 
-/* @keyframes comment {
+@keyframes comment {
   0%{ color: #dbdfe2;}
   50%{color: transparent;}
   100%{color: #dbdfe2;}
@@ -184,40 +178,49 @@ section.searchbar p {
   0%{ color: #c44536}
   50%{color: transparent;}
   100%{color: #c44536;}
-} */
+}
 
-
-
-
-
-
-
-
-
-
+/* event section */
 .event {
   width: 90%;
   margin: 0 auto;
-  border: 1px solid red
+  background-color: #dbdfe21e;
 }
-.events {
-  flex: 2;
-  border: 1px solid red
+.eachEvent{ flex: 3;}
+.eachEvent h1{ 
+  text-align: center;
 }
-.current {
-  border: 1px solid red;
-  flex: 1
-}
-.topic {
-  flex: 3
-}
+.eachEvent h1, .topic h2,.eventTime,.eventDate{margin: 0;}
+.topic h2 {padding: 3% 0}
+.currentEvent {flex: 2;}
+
+.topic {flex: 3;}
 .eventDetails {
-  flex: 1
+  flex: 1;
+  font-size: 80%;
+  flex-direction: column;
+  margin: auto;
+  border: 1px solid #dbdfe24a;
+}
+.eventDetails h3{
+  align-items: center;
+   padding: 2% 0;
+}
+.eventDetails span{font-size: 70%}
+.diffEvents {
+  border: 1px solid #dbdfe2;
+  font-size: 60%;
+  margin:  3%;
+  padding: .5% 1%
+}
+.likes a{
+  font-size: 90%;
+  margin-right: 3%;
 }
 
 
 @media all and  (max-width: 1400px){
-  .comment p {animation: comment1 .7s linear infinite}
+  /* .comment p {animation: comment1 .7s linear 10 !important} */
   .details {
   background-color: white;
   text-align: center;
