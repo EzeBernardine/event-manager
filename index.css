@@ -34,7 +34,7 @@ header {
 }
 
 /* flex items */
-.navbar,.mainsearch, section.searchbar p,.carocel, .details,.navbar ul, .event, .diffEvents, .likes, .eventDetails{
+.navbar,.mainsearch, section.searchbar p,.carocel, .details,.navbar ul, .event, .diffEvents, .likes, .eventDetails,.currentEventDateTime{
   display: flex;
 }
 /* \navbar */
@@ -91,7 +91,7 @@ header {
 .carocel3 img{animation:  images 20s  ease forwards 5;}
 .carocel2 img{animation:  images 20s 7s ease forwards 5;}
 .carocel1 img{animation:  images 20s 12s ease forwards 5;}
-@keyframes images{
+/* @keyframes images{
   0% {
     transform: scale(.5) rotateY(90deg);
     opacity: .2;
@@ -122,7 +122,7 @@ header {
     opacity: .0;
   }
   
-}
+} */
 
 /* locationAndTime */
 .details {
@@ -166,7 +166,7 @@ section.searchbar p {
 }
 .comment p { animation: comment .7s linear 10}
 
-@keyframes comment {
+/* @keyframes comment {
   0%{ color: #dbdfe2;}
   50%{color: transparent;}
   100%{color: #dbdfe2;}
@@ -175,12 +175,12 @@ section.searchbar p {
   0%{ color: #c44536}
   50%{color: transparent;}
   100%{color: #c44536;}
-}
+} */
 
 /* event section */
 .title {
   text-align: center;
-  font-size: 90%;
+  font-size: 110%;
   width: 60%;
   margin: 10% 0 3%
 }
@@ -194,9 +194,8 @@ section.searchbar p {
 .eachEvent h1{ 
   text-align: center;
 }
-.eachEvent h1, .topic h2, .topic h4,.eventTime,.eventDate{margin: 0;}
+.eachEvent h1, .topic h2, .topic h4,.eventTime,.eventDate, .currentEvent h4, .currentTopic, .currentsubTopic, .aboutCurrentEvent{margin: 0;}
 .topic h2 {padding: 3% 0}
-.currentEvent {flex: 2;}
 
 .topic {flex: 3;}
 .eventDetails {
@@ -204,7 +203,7 @@ section.searchbar p {
   font-size: 80%;
   flex-direction: column;
   margin: auto;
-  border: 1px solid #dbdfe24a;
+  /* border: 1px solid #dbdfe24a; */
 }
 .eventDetails h3{
   align-items: center;
@@ -228,6 +227,31 @@ section.searchbar p {
 }
 .likes a:hover{
   background-color: #dbdfe2a6;
+}
+
+
+
+
+.currentEvent {
+  flex: 2;
+  font-size: 70%
+}
+.currentEventDateTime span {
+  background-color: #084c6190;
+  color: white;
+  border-radius: 3px;
+  padding: 5px;
+}
+.currentEventDateTime {justify-content: flex-end;}
+.currentTopic {
+  padding: 5px;
+  text-align: center
+}
+.currentsubTopic {
+  text-align: center
+}
+.aboutCurrentEvent {
+  text-align: justify
 }
 
 
@@ -263,7 +287,6 @@ section.searchbar p {
   }
  .likes { font-size: 60% ; 
     border-top: 1px solid #dbdfe2a6;
-    border-bottom: 1px solid #dbdfe2a6
  }
   .topic,  .likes {font-size: 80%}
   .eventDetails h3{flex: 1 ; }
