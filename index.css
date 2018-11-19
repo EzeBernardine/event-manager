@@ -32,9 +32,22 @@ header {
   margin: -10px 5%;
   z-index: 1;
 }
-
+.menuLogo {
+  width: 35px;
+  height: 5px;
+  background-color: #dbdfe2;
+  z-index: 2;
+  margin: 6px 0;
+}
+.menu {
+  justify-content: flex-end;
+  z-index: 1;
+  padding: 10px;
+  display: flex;
+  
+}
 /* flex items */
-.navbar,.mainsearch, section.searchbar p,.carocel, .details,.navbar ul, .event, .diffEvents, .likes, .eventDetails,.currentEventDateTime{
+.navbar,.mainsearch, section.searchbar p,.carocel, .details,.navbar ul, .event, .likes, .eventDetails,.currentEventDateTime, .topic{
   display: flex;
 }
 /* \navbar */
@@ -91,7 +104,7 @@ header {
 .carocel3 img{animation:  images 20s  ease forwards 5;}
 .carocel2 img{animation:  images 20s 7s ease forwards 5;}
 .carocel1 img{animation:  images 20s 12s ease forwards 5;}
-/* @keyframes images{
+@keyframes images{
   0% {
     transform: scale(.5) rotateY(90deg);
     opacity: .2;
@@ -103,8 +116,9 @@ header {
   }
   40% {
     margin-left:  40%;
-    transform: scale(4);
+    transform: scale(6);
     opacity: 1;
+    z-index: 0;
   }
   80% {
     margin-left:  80%;
@@ -122,7 +136,7 @@ header {
     opacity: .0;
   }
   
-} */
+}
 
 /* locationAndTime */
 .details {
@@ -150,6 +164,7 @@ section.searchbar {
 }
 .mainsearch {
   width: 90%;
+  z-index: 1;
   margin: 0 auto;
   border-radius: 5px;
   background-color: #dbdfe2;
@@ -166,7 +181,7 @@ section.searchbar p {
 }
 .comment p { animation: comment .7s linear 10}
 
-/* @keyframes comment {
+@keyframes comment {
   0%{ color: #dbdfe2;}
   50%{color: transparent;}
   100%{color: #dbdfe2;}
@@ -175,7 +190,7 @@ section.searchbar p {
   0%{ color: #c44536}
   50%{color: transparent;}
   100%{color: #c44536;}
-} */
+}
 
 /* event section */
 .title {
@@ -197,13 +212,14 @@ section.searchbar p {
 .eachEvent h1, .topic h2, .topic h4,.eventTime,.eventDate, .currentEvent h4, .currentTopic, .currentsubTopic, .aboutCurrentEvent{margin: 0;}
 .topic h2 {padding: 3% 0}
 
-.topic {flex: 3;}
+.topic div:nth-child(1) {flex: 3; }
+  .likes {flex: 1; }
 .eventDetails {
   flex:  1 ;
   font-size: 80%;
-  flex-direction: column;
-  margin: auto;
-  /* border: 1px solid #dbdfe24a; */
+  align-content: center;
+  align-items: center;
+  /* flex-direction: column;background-color: #c44536 */
 }
 .eventDetails h3{
   align-items: center;
@@ -223,7 +239,7 @@ section.searchbar p {
   font-size: 90%;
   padding:  1.5%;
   border-radius: 3px;
-  color: #084c61d8
+  color: #084c61d8;
 }
 .likes a:hover{
   background-color: #dbdfe2a6;
@@ -280,7 +296,7 @@ section.searchbar p {
   section.searchbar {width: 90%; padding: 5px 0 }
   section.searchbar input{width: 90%; padding: 5px 0 }
   .mainsearch {width: 95%; }
-  .diffEvents {flex-direction: column}
+  .topic {flex-direction: column}
   .eventDetails {
     flex-direction: row;
     width: 100%
@@ -291,5 +307,8 @@ section.searchbar p {
   .topic,  .likes {font-size: 80%}
   .eventDetails h3{flex: 1 ; }
 
-  .navbar li {position: absolute;}
+  .navbar li {
+    position: absolute;
+    display: none;
+  }
 }
